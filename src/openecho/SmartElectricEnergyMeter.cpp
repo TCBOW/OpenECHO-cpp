@@ -7,23 +7,23 @@ namespace sonycsl_openecho
     const unsigned char SmartElectricEnergyMeter::EPC_OPERATION_STATUS = 0x80;
     const unsigned char SmartElectricEnergyMeter::EPC_ELECTRIC_ENERGY_METER_CLASSIFICATION = 0xD0;
     const unsigned char SmartElectricEnergyMeter::EPC_OWNER_CLASSIFICATION = 0xD1;
-    const unsigned char SmartElectricEnergyMeter::EPC_PHASES_AND_WIRES_SETTING_STATUS = D2;
-    const unsigned char SmartElectricEnergyMeter::EPC_COMPOSITE_TRANSFORMATION_RATIO = D3;
-    const unsigned char SmartElectricEnergyMeter::EPC_MULTIPLYING_FACTOR_FOR_COMPOSITE_TRANSFORMATION_RATIO = D4;
-    const unsigned char SmartElectricEnergyMeter::EPC_METER_TYPE_CERTIFICATION_NUMBER = D5;
-    const unsigned char SmartElectricEnergyMeter::EPC_YEAR_AND_MONTH_OF_INSPECTION_EXPIRY = D6;
-    const unsigned char SmartElectricEnergyMeter::EPC_NUMBER_OF_EFFECTIVE_DIGITS_FOR_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY = D7;
-    const unsigned char SmartElectricEnergyMeter::EPC_MEASURED_CUMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY_NORMAL_DIRECTION = E0;
-    const unsigned char SmartElectricEnergyMeter::EPC_UNIT_FOR_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY_NORMAL_AND_REVERSE_DIRECTIONS = E1;
-    const unsigned char SmartElectricEnergyMeter::EPC_HISTORICAL_DATA_OF_MEASURED_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY_NORMAL_DIRECTION = E2;
-    const unsigned char SmartElectricEnergyMeter::EPC_MEASURED_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY_REVERSE_DIRECTION = E3;
-    const unsigned char SmartElectricEnergyMeter::EPC_HISTORICAL_DATA_OF_MEASURED_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY_REVERSE_DIRECTION = E4;
-    const unsigned char SmartElectricEnergyMeter::EPC_DAY_FOR_WHICH_THE_HISTORICAL_DATA_OF_MEASURED_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY_IS_TO_BE_RETRIEVED = E5;
-    const unsigned char SmartElectricEnergyMeter::EPC_MEASURED_INSTANTANEOUS_ELECTRIC_ENERGY = E7;
-    const unsigned char SmartElectricEnergyMeter::EPC_MEASURED_INSTANTANEOUS_CURRENTS = E8;
-    const unsigned char SmartElectricEnergyMeter::EPC_MEASURED_INSTANTANEOUS_VOLTAGES = E9;
-    const unsigned char SmartElectricEnergyMeter::EPC_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY_MEASURED_AT_FIXED_TIME_NORMAL_DIRECTION = EA;
-    const unsigned char SmartElectricEnergyMeter::EPC_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY_MEASURED_AT_FIXED_TIME_REVERSE_DIRECTION = EB;
+    const unsigned char SmartElectricEnergyMeter::EPC_PHASES_AND_WIRES_SETTING_STATUS = 0xD2;
+    const unsigned char SmartElectricEnergyMeter::EPC_COMPOSITE_TRANSFORMATION_RATIO = 0xD3;
+    const unsigned char SmartElectricEnergyMeter::EPC_MULTIPLYING_FACTOR_FOR_COMPOSITE_TRANSFORMATION_RATIO = 0xD4;
+    const unsigned char SmartElectricEnergyMeter::EPC_METER_TYPE_CERTIFICATION_NUMBER = 0xD5;
+    const unsigned char SmartElectricEnergyMeter::EPC_YEAR_AND_MONTH_OF_INSPECTION_EXPIRY = 0xD6;
+    const unsigned char SmartElectricEnergyMeter::EPC_NUMBER_OF_EFFECTIVE_DIGITS_FOR_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY = 0xD7;
+    const unsigned char SmartElectricEnergyMeter::EPC_MEASURED_CUMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY_NORMAL_DIRECTION = 0xE0;
+    const unsigned char SmartElectricEnergyMeter::EPC_UNIT_FOR_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY_NORMAL_AND_REVERSE_DIRECTIONS = 0xE1;
+    const unsigned char SmartElectricEnergyMeter::EPC_HISTORICAL_DATA_OF_MEASURED_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY_NORMAL_DIRECTION = 0xE2;
+    const unsigned char SmartElectricEnergyMeter::EPC_MEASURED_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY_REVERSE_DIRECTION = 0xE3;
+    const unsigned char SmartElectricEnergyMeter::EPC_HISTORICAL_DATA_OF_MEASURED_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY_REVERSE_DIRECTION = 0xE4;
+    const unsigned char SmartElectricEnergyMeter::EPC_DAY_FOR_WHICH_THE_HISTORICAL_DATA_OF_MEASURED_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY_IS_TO_BE_RETRIEVED = 0xE5;
+    const unsigned char SmartElectricEnergyMeter::EPC_MEASURED_INSTANTANEOUS_ELECTRIC_ENERGY = 0xE7;
+    const unsigned char SmartElectricEnergyMeter::EPC_MEASURED_INSTANTANEOUS_CURRENTS = 0xE8;
+    const unsigned char SmartElectricEnergyMeter::EPC_MEASURED_INSTANTANEOUS_VOLTAGES = 0xE9;
+    const unsigned char SmartElectricEnergyMeter::EPC_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY_MEASURED_AT_FIXED_TIME_NORMAL_DIRECTION = 0xEA;
+    const unsigned char SmartElectricEnergyMeter::EPC_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY_MEASURED_AT_FIXED_TIME_REVERSE_DIRECTION = 0xEB;
     const unsigned char SmartElectricEnergyMeter::EPC_GET_PROPERTY_MAP = 0x9F;
     SmartElectricEnergyMeter::SmartElectricEnergyMeter() : DeviceObject()
     {
@@ -516,10 +516,10 @@ namespace sonycsl_openecho
     {
         return std::shared_ptr<std::vector<unsigned char>>();
     }
-    std::shared_ptr<std::vector<unsigned char>> SmartElectricEnergyMeter::Proxy::getFaultStatus()
-    {
-        return std::shared_ptr<std::vector<unsigned char>>();
-    }
+//    std::shared_ptr<std::vector<unsigned char>> SmartElectricEnergyMeter::Proxy::getFaultStatus()
+//    {
+//        return std::shared_ptr<std::vector<unsigned char>>();
+//    }
     std::shared_ptr<std::vector<unsigned char>> SmartElectricEnergyMeter::Proxy::getManufacturerCode()
     {
         return std::shared_ptr<std::vector<unsigned char>>();
@@ -1087,4 +1087,109 @@ namespace sonycsl_openecho
         return reqInformProperty(EPC_CUMULATIVE_AMOUNTS_OF_ELECTRIC_ENERGY_MEASURED_AT_FIXED_TIME_REVERSE_DIRECTION);
     }
 
+    // following function is DUMMY.
+    SmartElectricEnergyMeter::Informer &SmartElectricEnergyMeter::Informer::reqInformInformPropertyMap()
+    {
+        return reqInformProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetInstallationLocation()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetStandardVersionInformation()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetIdentificationNumber()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetMeasuredCumulativePowerConsumption()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetMeasuredInstantaneousPowerConsumption()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetManufacturersFaultCode()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetCurrentLimitSetting()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetFaultStatus()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetFaultDescription()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetManufacturerCode()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetBusinessFacilityCode()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetProductCode()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetProductionNumber()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetProductionDate()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetPowerSavingOperationSetting()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetRemoteControlSetting()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetCurrentTimeSetting()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetCurrentDateSetting()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetPowerLimitSetting()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetCumulativeOperatingTime()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetStatusChangeAnnouncementPropertyMap()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetSetPropertyMap()
+    {
+        return reqGetProperty(0);
+    }
+    SmartElectricEnergyMeter::Getter &SmartElectricEnergyMeter::Getter::reqGetGetPropertyMap()
+    {
+        return reqGetProperty(0);
+    }
+    std::shared_ptr<std::vector<unsigned char>> SmartElectricEnergyMeter::Proxy::getStandardVersionInformation() 
+    {
+        std::shared_ptr<std::vector<unsigned char>> dummyData = std::make_shared<std::vector<unsigned char>>();
+        dummyData->push_back(0xAA);
+        dummyData->push_back(0xBB);
+        dummyData->push_back(0xCC);
+        return dummyData;
+    }
 };
